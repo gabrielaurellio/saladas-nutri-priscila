@@ -2,9 +2,71 @@
 <html lang="pt-BR">
 
 <head>
+<style id="critical-cls-fix">
+  /* ── Setas do carrossel: dimensão fixa, sem layout shift ── */
+  .elementor-swiper-button {
+    width: 48px !important; height: 48px !important;
+    display: flex !important; align-items: center !important;
+    justify-content: center !important; position: absolute !important;
+    flex-shrink: 0 !important;
+  }
+  .elementor-swiper-button svg,
+  .elementor-swiper-button .e-font-icon-svg {
+    width: 20px !important; height: 20px !important;
+    display: block !important; flex-shrink: 0 !important;
+  }
+
+  /* ── Image-box (1080x1350 → exibida em 342x428) ── */
+  .elementor-image-box-img { display: block; width: 100%; }
+  .elementor-image-box-img img.attachment-full {
+    width: 100% !important; height: auto !important;
+    aspect-ratio: 1080 / 1350; display: block; object-fit: cover;
+  }
+
+  /* ── Imagem 14 no hero (800x1000) ── */
+  img.wp-image-12702 {
+    width: 100% !important; max-width: 800px !important;
+    height: auto !important; aspect-ratio: 800 / 1000; display: block;
+  }
+
+  /* ── Imagem LCP hero (800x703) ── */
+  img[src*="saladas-nutri"] {
+    width: 100% !important; max-width: 800px !important;
+    height: auto !important; aspect-ratio: 800 / 703; display: block;
+  }
+
+  /* ── Imagem circular nutricionista (800x800) ── */
+  img.wp-image-12690, img.wp-image-12700 {
+    width: 100% !important; max-width: 800px !important;
+    height: auto !important; aspect-ratio: 1 / 1; display: block;
+  }
+
+  /* ── Imagens do mockup/carousel de testemunhos ── */
+  .elementor-image-carousel .swiper-slide img {
+    width: 100% !important; height: auto !important;
+    aspect-ratio: 9 / 16; object-fit: cover; display: block;
+  }
+
+  /* ── Animações: apenas propriedades compostas pela GPU ── */
+  .elementor-button {
+    transition: transform 0.2s ease, opacity 0.2s ease,
+                background-color 0.2s ease !important;
+    will-change: transform;
+  }
+  .elementor-button:hover { transform: scale(1.02); opacity: 0.92; }
+  .e-font-icon-svg { transition: opacity 0.2s ease !important; }
+  .elementor-icon-list-text { transition: opacity 0.2s ease !important; }
+  .elementor-image-box-img img { transition: opacity 0.3s ease !important; }
+
+  /* ── Paginação do swiper: área de toque mínima ── */
+  .swiper-pagination-bullet {
+    min-width: 20px !important; min-height: 20px !important;
+  }
+</style>
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://controle.nutriliacastro.com">
 	<link rel="dns-prefetch" href="https://www.youtube.com">
+	<meta name="description" content="60 receitas de saladas no pote com molhos irresistíveis. Monte com antecedência, conserve por até 7 dias. Acesso imediato com garantia de 7 dias.">
 	<title>Saladas no Pote + Molhos Irresistíveis</title>
 	<meta name='robots' content='max-image-preview:large'>
 	<style>
@@ -462,9 +524,7 @@
 	<link rel='preload' id='elementor-gf-local-roboto-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742218608' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742218608' media='all'></noscript>
 	<link rel='preload' id='elementor-gf-local-robotoslab-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742218627' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742218627' media='all'></noscript>
 	<link rel='preload' id='elementor-gf-local-sora-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/sora.css?ver=1742218632' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-gf-local-sora-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/sora.css?ver=1742218632' media='all'></noscript>
-	<link rel='preload' id='elementor-gf-poppins-css' href='https://fonts.googleapis.com/css2?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"><noscript><link rel='stylesheet' id='elementor-gf-poppins-css' href='https://fonts.googleapis.com/css2?family=Poppins:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all'></noscript>
-	<link rel='preload' id='elementor-gf-local-opensans-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/opensans.css?ver=1742218673' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-gf-local-opensans-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/opensans.css?ver=1742218673' media='all'></noscript>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.32.5"
+		<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.32.5"
 		id="font-awesome-4-shim-js"></script>
 	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
 	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
@@ -1312,7 +1372,7 @@
 							</div>
 							<div class="elementor-swiper-button elementor-swiper-button-prev" role="button"
 								tabindex="0">
-								<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left"
+								<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-left" style="width:20px;height:20px;display:block;flex-shrink:0"
 									viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M646 125C629 125 613 133 604 142L308 442C296 454 292 471 292 487 292 504 296 521 308 533L604 854C617 867 629 875 646 875 663 875 679 871 692 858 704 846 713 829 713 812 713 796 708 779 692 767L438 487 692 225C700 217 708 204 708 187 708 171 704 154 692 142 675 129 663 125 646 125Z">
@@ -1321,7 +1381,7 @@
 							</div>
 							<div class="elementor-swiper-button elementor-swiper-button-next" role="button"
 								tabindex="0">
-								<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right"
+								<svg aria-hidden="true" class="e-font-icon-svg e-eicon-chevron-right" style="width:20px;height:20px;display:block;flex-shrink:0"
 									viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
 									<path
 										d="M696 533C708 521 713 504 713 487 713 471 708 454 696 446L400 146C388 133 375 125 354 125 338 125 325 129 313 142 300 154 292 171 292 187 292 204 296 221 308 233L563 492 304 771C292 783 288 800 288 817 288 833 296 850 308 863 321 871 338 875 354 875 371 875 388 867 400 854L696 533Z">
