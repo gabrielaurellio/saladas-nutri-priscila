@@ -7,9 +7,6 @@
 	<link rel="preload" as="image" fetchpriority="high" href="saladas-nutri.webp">
 	<link rel="preload" as="image" href="img/14-lcp.webp">
 	<!-- Preconnect para recursos externos necessários -->
-	<link rel="preconnect" href="https://controle.nutriliacastro.com" crossorigin>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="https://www.youtube.com">
 	<meta name="description" content="60 receitas de saladas no pote com molhos irresistíveis. Monte com antecedência, conserve por até 7 dias. Acesso imediato com garantia de 7 dias.">
 	<title>Saladas no Pote + Molhos Irresistíveis</title>
@@ -446,10 +443,10 @@
 			line-height: 1.6;
 		}
 	</style>
-		<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.32.5"
+		<script defer src="/js/fa-v4-shims.min.js"
 		id="font-awesome-4-shim-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+	<script defer src="/js/jquery.min.js" id="jquery-core-js"></script>
+	<script defer src="/js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
 	<style>
 		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
 		.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
@@ -524,17 +521,36 @@
 	<!-- CSS local — bloqueante mas servido pelo CDN do GitHub Pages, sem latência de domínio externo -->
 	<link rel="stylesheet" href="css/elementor.css">
 	<!-- Google Fonts — não bloqueante, fontes não afetam CLS pois texto usa fallback até carregar -->
-	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;700&family=Sora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;700&family=Sora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap"></noscript>
+	<!-- Fontes locais — sem request externo -->
+	<link rel="preload" href="/fonts/roboto-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="/fonts/sora-600-latin.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="stylesheet" href="/fonts/fonts.css">
 	<meta name="theme-color" content="#FFFFFF">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <script>
-  window.pixelId = "6a1a4bd14a6351de14a9346e";
-  var a = document.createElement("script");
-  a.setAttribute("async", "");
-  a.setAttribute("defer", "");
-  a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-  document.head.appendChild(a);
+// Pixel adiado 3.5s para não competir com LCP
+window.addEventListener('load', function() {
+  setTimeout(function() {
+    window.pixelId = "6a1a4bd14a6351de14a9346e";
+    var a = document.createElement("script");
+    a.setAttribute("async", "");
+    a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+    document.head.appendChild(a);
+  }, 3500);
+  ['mousedown','touchstart','keydown','scroll'].forEach(function(e){
+    document.addEventListener(e, function init(){
+      document.removeEventListener(e, init);
+      if (!window._utmLoaded) {
+        window._utmLoaded = true;
+        window.pixelId = "6a1a4bd14a6351de14a9346e";
+        var a = document.createElement("script");
+        a.setAttribute("async", "");
+        a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+        document.head.appendChild(a);
+      }
+    });
+  });
+});
 </script>
 </head>
 
@@ -683,8 +699,9 @@
 						data-id="9520a06" data-element_type="widget" data-widget_type="image.default">
 						<div class="elementor-widget-container">
 							<img decoding="async" width="800" height="800" src="img/2.webp"
-								class="attachment-large size-large wp-image-12690" alt=""
-								sizes="(max-width: 800px) 100vw, 800px">
+								srcset="img/2-sm.webp 433w, img/2.webp 800w"
+								sizes="(max-width: 480px) 433px, 800px"
+								class="attachment-large size-large wp-image-12690" alt="">
 						</div>
 					</div>
 					<div class="elementor-element elementor-element-d3391b8 elementor-align-justify elementor-widget__width-initial elementor-widget-mobile__width-inherit elementor-widget elementor-widget-button"
@@ -718,8 +735,9 @@
 						<div class="elementor-image-box-wrapper">
 							<figure class="elementor-image-box-img"><img loading="lazy" decoding="async" width="1080"
 									height="1350" src="img/6.webp"
-									class="attachment-full size-full wp-image-12694" alt=""
-									sizes="(max-width: 1080px) 100vw, 1080px"></figure>
+									srcset="img/6-sm.webp 342w, img/6.webp 500w"
+									sizes="(max-width: 480px) 342px, 500px"
+									class="attachment-full size-full wp-image-12694" alt=""></figure>
 							<div class="elementor-image-box-content">
 								<h3 class="elementor-image-box-title">SALADA REFRESCANTE<br>+ MOLHO CÍTRICO</h3>
 								<p class="elementor-image-box-description">Conservação: 7 dias<br>Calorias: 100 kcal</p>
@@ -733,8 +751,9 @@
 						<div class="elementor-image-box-wrapper">
 							<figure class="elementor-image-box-img"><img loading="lazy" decoding="async" width="1080"
 									height="1350" src="img/7.webp"
-									class="attachment-full size-full wp-image-12695" alt=""
-									sizes="(max-width: 1080px) 100vw, 1080px"></figure>
+									srcset="img/7-sm.webp 342w, img/7.webp 500w"
+									sizes="(max-width: 480px) 342px, 500px"
+									class="attachment-full size-full wp-image-12695" alt=""></figure>
 							<div class="elementor-image-box-content">
 								<h3 class="elementor-image-box-title">SALADA CAPRESE</h3>
 								<p class="elementor-image-box-description">Conservação: 7 dias<br>Calorias: 120 kcal</p>
@@ -1700,22 +1719,22 @@
 			document.addEventListener(event, lazyloadRun);
 		});
 	</script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.min.js?ver=3.3.0"
+	<script defer src="/js/hello-frontend.min.js"
 		id="hello-theme-frontend-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.32.5"
+	<script defer src="/js/webpack-runtime.min.js"
 		id="elementor-webpack-runtime-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.32.5"
+	<script defer src="/js/elementor-frontend-modules.min.js"
 		id="elementor-frontend-modules-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.32.5" id="elementor-frontend-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/swiper/v8/swiper.min.js?ver=8.4.5" id="swiper-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/pro-elements/assets/js/webpack-pro.runtime.min.js?ver=3.29.0"
+	<script defer src="/js/jquery-ui-core.min.js" id="jquery-ui-core-js"></script>
+	<script defer src="/js/elementor-frontend.min.js" id="elementor-frontend-js"></script>
+	<script defer src="/js/swiper.min.js" id="swiper-js"></script>
+	<script defer src="/js/elementor-pro-runtime.min.js"
 		id="elementor-pro-webpack-runtime-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/pro-elements/assets/js/frontend.min.js?ver=3.29.0"
+	<script defer src="/js/wp-hooks.min.js" id="wp-hooks-js"></script>
+	<script defer src="/js/wp-i18n.min.js" id="wp-i18n-js"></script>
+	<script defer src="/js/elementor-pro-frontend.min.js"
 		id="elementor-pro-frontend-js"></script>
-	<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/pro-elements/assets/js/elements-handlers.min.js?ver=3.29.0"
+	<script defer src="/js/elementor-pro-elements-handlers.min.js"
 		id="pro-elements-handlers-js"></script>
 	<style>
 		/* Custom Accordion Fix */
