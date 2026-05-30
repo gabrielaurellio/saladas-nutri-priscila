@@ -2,12 +2,14 @@
 <html lang="pt-BR">
 
 <head>
-	<link rel="preconnect" href="https://controle.nutriliacastro.com" crossorigin>
-	<link rel="preload" as="image" 
-	      href="img/14-lcp.webp"
-	      fetchpriority="high">
 	<meta charset="UTF-8">
-	<link rel="preconnect" href="https://controle.nutriliacastro.com">
+	<!-- Preload das imagens acima da dobra (LCP) — antes de qualquer CSS bloqueante -->
+	<link rel="preload" as="image" fetchpriority="high" href="saladas-nutri.webp">
+	<link rel="preload" as="image" href="img/14-lcp.webp">
+	<!-- Preconnect para recursos externos necessários -->
+	<link rel="preconnect" href="https://controle.nutriliacastro.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="dns-prefetch" href="https://www.youtube.com">
 	<meta name="description" content="60 receitas de saladas no pote com molhos irresistíveis. Monte com antecedência, conserve por até 7 dias. Acesso imediato com garantia de 7 dias.">
 	<title>Saladas no Pote + Molhos Irresistíveis</title>
@@ -519,8 +521,9 @@
   /* ── Imagens gerais: nunca mudam o layout após carregar ── */
   img{max-width:100%;height:auto}
 </style>
-	<link rel="preload" href="css/elementor.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="css/elementor.css"></noscript>
+	<!-- CSS local — bloqueante mas servido pelo CDN do GitHub Pages, sem latência de domínio externo -->
+	<link rel="stylesheet" href="css/elementor.css">
+	<!-- Google Fonts — não bloqueante, fontes não afetam CLS pois texto usa fallback até carregar -->
 	<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;700&family=Sora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 	<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Roboto+Slab:wght@400;700&family=Sora:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap"></noscript>
 	<meta name="theme-color" content="#FFFFFF">
@@ -545,7 +548,7 @@
 				<div class="elementor-element elementor-element-3305f33 elementor-widget elementor-widget-image"
 					data-id="3305f33" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img decoding="async" width="800" height="703"
+						<img fetchpriority="high" decoding="async" width="800" height="703"
 							src="saladas-nutri.webp" class="attachment-large size-large wp-image-12705"
 							alt="Saladas no Pote"
 							sizes="(max-width: 800px) 100vw, 800px">
