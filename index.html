@@ -2,67 +2,10 @@
 <html lang="pt-BR">
 
 <head>
-<style id="critical-cls-fix">
-  /* ── Setas do carrossel: dimensão fixa, sem layout shift ── */
-  .elementor-swiper-button {
-    width: 48px !important; height: 48px !important;
-    display: flex !important; align-items: center !important;
-    justify-content: center !important; position: absolute !important;
-    flex-shrink: 0 !important;
-  }
-  .elementor-swiper-button svg,
-  .elementor-swiper-button .e-font-icon-svg {
-    width: 20px !important; height: 20px !important;
-    display: block !important; flex-shrink: 0 !important;
-  }
-
-  /* ── Image-box (1080x1350 → exibida em 342x428) ── */
-  .elementor-image-box-img { display: block; width: 100%; }
-  .elementor-image-box-img img.attachment-full {
-    width: 100% !important; height: auto !important;
-    aspect-ratio: 1080 / 1350; display: block; object-fit: cover;
-  }
-
-  /* ── Imagem 14 no hero (800x1000) ── */
-  img.wp-image-12702 {
-    width: 100% !important; max-width: 800px !important;
-    height: auto !important; aspect-ratio: 800 / 1000; display: block;
-  }
-
-  /* ── Imagem LCP hero (800x703) ── */
-  img[src*="saladas-nutri"] {
-    width: 100% !important; max-width: 800px !important;
-    height: auto !important; aspect-ratio: 800 / 703; display: block;
-  }
-
-  /* ── Imagem circular nutricionista (800x800) ── */
-  img.wp-image-12690, img.wp-image-12700 {
-    width: 100% !important; max-width: 800px !important;
-    height: auto !important; aspect-ratio: 1 / 1; display: block;
-  }
-
-  /* ── Imagens do mockup/carousel de testemunhos ── */
-  .elementor-image-carousel .swiper-slide img {
-    width: 100% !important; height: auto !important;
-    aspect-ratio: 9 / 16; object-fit: cover; display: block;
-  }
-
-  /* ── Animações: apenas propriedades compostas pela GPU ── */
-  .elementor-button {
-    transition: transform 0.2s ease, opacity 0.2s ease,
-                background-color 0.2s ease !important;
-    will-change: transform;
-  }
-  .elementor-button:hover { transform: scale(1.02); opacity: 0.92; }
-  .e-font-icon-svg { transition: opacity 0.2s ease !important; }
-  .elementor-icon-list-text { transition: opacity 0.2s ease !important; }
-  .elementor-image-box-img img { transition: opacity 0.3s ease !important; }
-
-  /* ── Paginação do swiper: área de toque mínima ── */
-  .swiper-pagination-bullet {
-    min-width: 20px !important; min-height: 20px !important;
-  }
-</style>
+	<link rel="preconnect" href="https://controle.nutriliacastro.com" crossorigin>
+	<link rel="preload" as="image" 
+	      href="https://controle.nutriliacastro.com/wp-content/uploads/2025/11/14-819x1024.webp"
+	      fetchpriority="high">
 	<meta charset="UTF-8">
 	<link rel="preconnect" href="https://controle.nutriliacastro.com">
 	<link rel="dns-prefetch" href="https://www.youtube.com">
@@ -501,29 +444,52 @@
 			line-height: 1.6;
 		}
 	</style>
-	<link rel='preload' id='hello-elementor-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/style.min.css?ver=3.3.0' as='style' onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel='stylesheet' id='hello-elementor-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/style.min.css?ver=3.3.0' media='all'></noscript>
-	<link rel='preload' id='hello-elementor-theme-style-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.3.0' as='style' onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.3.0' media='all'></noscript>
-	<link rel='preload' id='hello-elementor-header-footer-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.3.0' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.3.0' media='all'></noscript>
-	<link rel='preload' id='elementor-frontend-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-frontend-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='elementor-post-5-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/css/post-5.css?ver=1761740152' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-post-5-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/css/post-5.css?ver=1761740152' media='all'></noscript>
-	<link rel='preload' id='font-awesome-5-all-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='font-awesome-5-all-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='font-awesome-4-shim-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='font-awesome-4-shim-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-image-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-image-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-spacer-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-spacer-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-heading-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-heading-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-icon-list-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-icon-list-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-image-box-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-image-box-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-divider-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-divider-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-menu-anchor-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-menu-anchor.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-menu-anchor-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-menu-anchor.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-animated-headline-css' href='https://controle.nutriliacastro.com/wp-content/plugins/pro-elements/assets/css/widget-animated-headline.min.css?ver=3.29.0' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-animated-headline-css' href='https://controle.nutriliacastro.com/wp-content/plugins/pro-elements/assets/css/widget-animated-headline.min.css?ver=3.29.0' media='all'></noscript>
-	<link rel='preload' id='swiper-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='swiper-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' media='all'></noscript>
-	<link rel='preload' id='e-swiper-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='e-swiper-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-image-carousel-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-image-carousel-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='widget-toggle-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-toggle.min.css?ver=3.32.5' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='widget-toggle-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-toggle.min.css?ver=3.32.5' media='all'></noscript>
-	<link rel='preload' id='elementor-post-11737-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/css/post-11737.css?ver=1762263658' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-post-11737-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/css/post-11737.css?ver=1762263658' media='all'></noscript>
-	<link rel='preload' id='elementor-gf-local-roboto-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742218608' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742218608' media='all'></noscript>
-	<link rel='preload' id='elementor-gf-local-robotoslab-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742218627' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742218627' media='all'></noscript>
-	<link rel='preload' id='elementor-gf-local-sora-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/sora.css?ver=1742218632' as='style' onload="this.onload=null;this.rel='stylesheet';this.media='all'"><noscript><link rel='stylesheet' id='elementor-gf-local-sora-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/sora.css?ver=1742218632' media='all'></noscript>
+	<link rel='stylesheet' id='hello-elementor-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/style.min.css?ver=3.3.0'
+		media='all'>
+	<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.3.0'
+		media='all'>
+	<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://controle.nutriliacastro.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.3.0'
+		media='all'>
+	<link rel='stylesheet' id='elementor-frontend-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='elementor-post-5-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/css/post-5.css?ver=1761740152'
+		media='all'>
+	<link rel='stylesheet' id='font-awesome-5-all-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-image-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-spacer-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-spacer.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-heading-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-icon-list-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-icon-list.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-image-box-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image-box.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-divider-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-menu-anchor-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-menu-anchor.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-animated-headline-css' href='https://controle.nutriliacastro.com/wp-content/plugins/pro-elements/assets/css/widget-animated-headline.min.css?ver=3.29.0'
+		media='all'>
+	<link rel='stylesheet' id='swiper-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5'
+		media='all'>
+	<link rel='stylesheet' id='e-swiper-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-image-carousel-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-image-carousel.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='widget-toggle-css' href='https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/css/widget-toggle.min.css?ver=3.32.5'
+		media='all'>
+	<link rel='stylesheet' id='elementor-post-11737-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/css/post-11737.css?ver=1762263658'
+		media='all'>
+	<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742218608'
+		media='all'>
+	<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1742218627'
+		media='all'>
+	<link rel='stylesheet' id='elementor-gf-local-sora-css' href='https://controle.nutriliacastro.com/wp-content/uploads/elementor/google-fonts/css/sora.css?ver=1742218632'
+		media='all'>
 		<script defer src="https://controle.nutriliacastro.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.32.5"
 		id="font-awesome-4-shim-js"></script>
 	<script defer src="https://controle.nutriliacastro.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
@@ -570,6 +536,35 @@
 		display: block;
 	}
 </style>
+	<style id="critical-cls-fix">
+  /* ── Setas do carrossel: dimensões fixas evitam layout shift ── */
+  .elementor-swiper-button{width:48px!important;height:48px!important;display:flex!important;align-items:center!important;justify-content:center!important;position:absolute!important;flex-shrink:0!important}
+  .elementor-swiper-button svg,.elementor-swiper-button .e-font-icon-svg{width:20px!important;height:20px!important;display:block!important;flex-shrink:0!important}
+
+  /* ── Image-box (1080x1350) reserva espaço antes do CSS externo carregar ── */
+  .elementor-image-box-img{display:block;width:100%}
+  .elementor-image-box-img img{width:100%!important;height:auto!important;aspect-ratio:1080/1350;display:block;object-fit:cover}
+
+  /* ── Imagem 14 no hero (800x1000) ── */
+  img.wp-image-12702{width:100%!important;max-width:800px!important;height:auto!important;aspect-ratio:800/1000;display:block}
+
+  /* ── Imagem LCP saladas hero (800x703) ── */
+  img[src*="saladas-nutri"]{width:100%!important;max-width:800px!important;height:auto!important;aspect-ratio:800/703;display:block}
+
+  /* ── Animações: apenas propriedades compostas pela GPU ── */
+  .elementor-button{transition:transform .2s ease,opacity .2s ease,background-color .2s ease!important;will-change:transform}
+  .elementor-button:hover{transform:scale(1.02);opacity:.92}
+  .e-font-icon-svg{transition:opacity .2s ease!important}
+  .elementor-icon-list-text{transition:opacity .2s ease!important}
+  .elementor-image-box-img img{transition:opacity .3s ease!important}
+
+  /* ── Swiper: evita reflow forçado ── */
+  .swiper-slide{will-change:transform;transform:translateZ(0)}
+  .swiper-wrapper{will-change:transform}
+
+  /* ── Imagens gerais: nunca mudam o layout após carregar ── */
+  img{max-width:100%;height:auto}
+</style>
 	<meta name="theme-color" content="#FFFFFF">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <script>
@@ -592,7 +587,7 @@
 				<div class="elementor-element elementor-element-3305f33 elementor-widget elementor-widget-image"
 					data-id="3305f33" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img fetchpriority="high" decoding="async" width="800" height="703"
+						<img decoding="async" width="800" height="703"
 							src="saladas-nutri.webp" class="attachment-large size-large wp-image-12705"
 							alt="Saladas no Pote"
 							sizes="(max-width: 800px) 100vw, 800px">
@@ -601,7 +596,7 @@
 				<div class="elementor-element elementor-element-a85d7a1 elementor-widget elementor-widget-image"
 					data-id="a85d7a1" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img decoding="async" width="800" height="1000"
+						<img decoding="async" width="800" height="1000" fetchpriority="high"
 							src="https://controle.nutriliacastro.com/wp-content/uploads/2025/11/14-819x1024.webp"
 							class="attachment-large size-large wp-image-12702" alt=""
 							srcset="https://controle.nutriliacastro.com/wp-content/uploads/2025/11/14-819x1024.webp 819w, https://controle.nutriliacastro.com/wp-content/uploads/2025/11/14-240x300.webp 240w, https://controle.nutriliacastro.com/wp-content/uploads/2025/11/14-768x960.webp 768w, https://controle.nutriliacastro.com/wp-content/uploads/2025/11/14.webp 1080w"
